@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Board</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Job Board</h1>
+  </header>
+  <main>
+    <section class="search-filter-section">
+      <input type="text" id="searchInput" placeholder="Search jobs by title, company, or tech stack...">
+      <div class="filters">
+        <select id="typeFilter">
+          <option value="">All Types</option>
+          <option value="Full-time">Full-time</option>
+          <option value="Part-time">Part-time</option>
+          <option value="Remote">Remote</option>
+        </select>
+        <select id="locationFilter">
+          <option value="">All Locations</option>
+        </select>
+        <select id="techFilter">
+          <option value="">All Tech Stacks</option>
+        </select>
+      </div>
+      <button id="viewBookmarks">Bookmarked Jobs</button>
+      <button id="resetFilters">Reset Filters</button>
+    </section>
+    <section id="jobsContainer" class="jobs-container">
+      <!-- Job cards will be rendered here -->
+    </section>
+  </main>
+  <div id="jobModal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <div id="modalDetails"></div>
+    </div>
+  </div>
+  <script src="jobs.js"></script>
+  <script src="script.js"></script>
+</body>
+</html> 
